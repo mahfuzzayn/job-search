@@ -1,0 +1,6 @@
+.linear-text {
+    background: -webkit-linear-gradient(360deg, #7e90fe, #9873ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
