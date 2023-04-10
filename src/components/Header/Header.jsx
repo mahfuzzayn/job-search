@@ -7,12 +7,14 @@ const titles = {
     "/statistics": "Statistics - JobSearch",
     "/applied-jobs": "Applied Jobs - JobSearch",
     "/blog": "Blog - JobSearch",
+    "/job": "Blog - JobSearch",
 };
 
 const Header = () => {
     const location = useLocation();
     useEffect(() => {
         document.title = titles[location.pathname] ?? "JobSearch";
+        console.log(location)
     }, [location]);
 
     return (

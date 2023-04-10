@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
 import dollarColored from "../../assets/Logo/dollar-linear-colored.svg";
 import calendarColored from "../../assets/Logo/calendar-linear-colored.svg";
@@ -19,6 +19,10 @@ const JobDetails = () => {
         salary,
         contact_information,
     } = job;
+
+    useEffect(() => {
+        document.title = "Job Details - JobSearch";
+    }, [job]);
     console.log(job);
 
     return (
@@ -62,59 +66,59 @@ const JobDetails = () => {
                     </div>
                     <div className="right-content ">
                         <div className="bg-[#faf8ff] lg:w-[424px] p-[30px] rounded-lg">
-                            <h2 className="text-[20px] text-[#1A1919] font-bold mt-0.5">
+                            <h2 className="text-[20px] text-[#1A1919] text-center sm:text-left mt-0.5 font-bold">
                                 Job Details
                             </h2>
                             <hr className="border-1 border-[#9873FF] opacity-30 my-6" />
                             <div className="flex flex-col gap-y-4">
-                                <p className="flex items-center gap-x-2">
+                                <p className="flex flex-col sm:flex-row items-center gap-x-2">
                                     <img src={dollarColored} alt="" />
                                     <span className="text-[20px] text-[#474747] font-bold">
                                         Salary<span className="px-1">:</span>
                                     </span>
-                                    <span className="text-[20px] text-[#757575] font-medium">
+                                    <span className="text-[20px] text-[#757575] text-center font-medium">
                                         {salary} (Per Month)
                                     </span>
                                 </p>
-                                <p className="flex items-center gap-x-2">
+                                <p className="flex flex-col sm:flex-row items-center gap-x-2">
                                     <img src={calendarColored} alt="" />
-                                    <span className="text-[20px] text-[#474747] font-bold">
+                                    <span className="text-[20px] text-[#474747] text-center font-bold">
                                         Job Title<span className="px-1">:</span>
                                     </span>
-                                    <span className="text-[20px] text-[#757575] font-medium">
+                                    <span className="text-[20px] text-[#757575] text-center font-medium">
                                         {job_title}
                                     </span>
                                 </p>
                             </div>
-                            <h2 className="text-[20px] text-[#1A1919] mt-8 font-bold">
+                            <h2 className="text-[20px] text-[#1A1919] text-center sm:text-left mt-8 font-bold">
                                 Contact Information
                             </h2>
                             <hr className="border-1 border-[#9873FF] opacity-30 my-6" />
                             <div className="flex flex-col gap-y-4">
-                                <p className="flex items-center gap-x-2">
+                                <p className="flex flex-col sm:flex-row items-center gap-x-2">
                                     <img src={phoneColored} alt="" />
                                     <span className="text-[20px] text-[#474747] font-bold">
                                         Phone<span className="px-1">:</span>
                                     </span>
-                                    <span className="text-[20px] text-[#757575] font-medium">
+                                    <span className="text-[20px] text-[#757575] text-center font-medium">
                                         {contact_information.phone}
                                     </span>
                                 </p>
-                                <p className="flex items-center gap-x-2">
+                                <p className="flex flex-col sm:flex-row items-center gap-x-2">
                                     <img src={emailColored} alt="" />
                                     <span className="text-[20px] text-[#474747] font-bold">
                                         Email<span className="px-1">:</span>
                                     </span>
-                                    <span className="text-[20px] text-[#757575] font-medium">
+                                    <span className="text-[20px] text-[#757575] text-center font-medium">
                                         {contact_information.email}
                                     </span>
                                 </p>
-                                <p className="flex items-center gap-x-2">
+                                <p className="flex flex-col sm:flex-row items-center gap-x-2">
                                     <img src={locationColored} alt="" />
                                     <span className="text-[20px] text-[#474747] font-bold">
                                         Address<span className="px-1">:</span>
                                     </span>
-                                    <span className="text-[20px] text-[#757575] font-medium">
+                                    <span className="text-[20px] text-[#757575] text-center font-medium">
                                         {location}
                                     </span>
                                 </p>
