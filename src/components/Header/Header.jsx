@@ -1,8 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import ActiveLink from "../ActiveLink/ActiveLink";
 
+const titles = {
+    "/": "Home",
+    "/about": "About",
+};
+
 const Header = () => {
+    const location = useLocation();
+    useEffect(() => {
+        document.title = titles[location.pathname] ?? "JobSearch";
+    }, [location]);
+
     return (
         <header className="header bg-[#faf8ff] pt-[60px] px-6">
             <div className="container max-w-[1920px] flex justify-around items-center mx-auto">
