@@ -4,7 +4,7 @@ import JobCategory from "../JobCategory/JobCategory";
 
 const JobCategoryList = () => {
     const jobCategories = useLoaderData();
-    console.log(jobCategories)
+
     return (
         <div className="job-category-list-section mt-[130px] mx-6">
             <div className="container flex flex-col items-center max-w-[1920px] mx-auto">

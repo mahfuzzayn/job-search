@@ -1,10 +1,12 @@
 import React from "react";
 import locationIcon from "../../assets/Logo/location.svg";
 import dollarIcon from "../../assets/Logo/dollar.svg";
+import { Link } from "react-router-dom";
 
 const FeaturedJob = ({ featuredJob }) => {
     const {
         id,
+        job_id,
         logo,
         job_title,
         company_name,
@@ -45,7 +47,7 @@ const FeaturedJob = ({ featuredJob }) => {
                 </span>
             </p>
             <button className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[18px] py-[11px] mt-6 rounded-lg">
-                View Details
+                <Link to={`/job/${job_id}`}>View Details</Link>
             </button>
         </div>
     );

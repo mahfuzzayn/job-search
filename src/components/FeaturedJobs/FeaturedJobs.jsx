@@ -8,6 +8,7 @@ const FeaturedJobs = () => {
             .then((res) => res.json())
             .then((data) => setFeaturedJobs(data));
     }, []);
+
     return (
         <div className="featured-jobs-section mt-[130px] mx-6">
             <div className="container flex flex-col items-center max-w-[1920px] mx-auto">
@@ -28,6 +29,9 @@ const FeaturedJobs = () => {
                         ></FeaturedJob>
                     ))}
                 </div>
+                <button className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg">
+                    See All Jobs
+                </button>
             </div>
         </div>
     );

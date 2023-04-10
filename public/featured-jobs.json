@@ -1,62 +1,116 @@
 [
     {
         "id": "ftj-zwo2vp",
+        "job_id": "jnkdrkenuji90jy7h4g",
         "logo": "https://i.ibb.co/1vf909w/ftj-google.png",
         "job_title": "Technical Database Engineer",
         "company_name": "Google LLC",
         "work_type": "Remote",
         "location": "Dhaka, Bangladesh",
         "job_type": "FullTime",
-        "salary": "100K - 150K"
+        "salary": "100K - 150K",
+        "job_description": "We're looking for a Technical Database Engineer with 5+ years of experience in database administration and architecture, expertise in Oracle, SQL Server, MySQL, PostgreSQL, and MongoDB, and experience in implementing high availability and disaster recovery solutions. The role involves designing, implementing, and maintaining complex databases, collaborating with cross-functional teams, and providing technical guidance and support to junior staff. Strong SQL query and performance tuning skills are required.",
+        "job_responsibility": "The Technical Database Engineer will be responsible for designing, implementing, and maintaining complex databases to meet the business objectives of the organization. This involves developing database architectures that support scalability, performance, and security, monitoring database performance, and implementing tuning methodologies. The Technical Database Engineer will also manage database security, backup, and recovery procedures to ensure data integrity.",
+        "educational_requirements": "Bachelor's degree in Computer Science, Information Systems, or a related field. In addition, they should have at least 5 years of relevant experience in database administration and architecture.",
+        "experiences": "More than 5 Years in this field.",
+        "contact_information": {
+            "phone": "+1 301-388-8222",
+            "email": "career@google.com"
+        }
     },
     {
         "id": "ftj-z6uulb",
+        "job_id": "j69rjhdqo3iz419bl01",
         "logo": "https://i.ibb.co/CMc3VY6/ftj-netflix.png",
         "job_title": "Senior Product Designer",
         "company_name": "Netflix",
         "work_type": "Onsite",
         "location": "Dhaka, Bangladesh",
         "job_type": "FullTime",
-        "salary": "100K - 150K"
+        "salary": "100K - 150K",
+        "job_description": "We are looking for a Senior Product Designer who will be responsible for leading the design of our product, ensuring that it is intuitive, aesthetically pleasing, and aligned with the needs of our users. The Senior Product Designer will work closely with cross-functional teams to develop user-centered designs, create wireframes and prototypes, conduct user research, and design high-fidelity interfaces. The ideal candidate will have a strong portfolio that showcases their design skills, experience leading design projects, and a deep understanding of design principles, user research methodologies, and design tools.",
+        "job_responsibility": "The Senior Product Designer will be responsible for leading the design process from concept to launch, ensuring that the design meets the needs of our users and is aligned with the company's vision. They will collaborate with cross-functional teams, including product managers, engineers, and other stakeholders, to develop user-centered designs that are visually appealing, easy to use, and accessible. The Senior Product Designer will also conduct user research, analyze user feedback, and iterate on designs based on insights gathered. Additionally, they will be responsible for mentoring junior designers and contributing to the development of design guidelines and best practices.",
+        "educational_requirements": "Bachelor's or Master's degree in a design-related field, such as Graphic Design, Product Design, or Interaction Design.",
+        "experiences": "5-7 Years in this field.",
+        "contact_information": {
+            "phone": "+1 718-788-9376",
+            "email": "career@netflix.com"
+        }
     },
     {
         "id": "ftj-uaisfr",
+        "job_id": "j8fbv6jxa7zlrsrukfk",
         "logo": "https://i.ibb.co/VJY1LRs/ftj-tesla.png",
         "job_title": "Software Engineer",
         "company_name": "Tesla",
         "work_type": "Onsite",
         "location": "Dhaka, Bangladesh",
         "job_type": "FullTime",
-        "salary": "100K - 150K"
+        "salary": "100K - 150K",
+        "job_description": "We are seeking a Software Engineer to join our team. The Software Engineer will be responsible for designing, developing, and maintaining software applications that meet the needs of our customers. The ideal candidate will have experience in software development, as well as strong problem-solving and analytical skills. They will work closely with cross-functional teams, including product managers, designers, and other stakeholders, to deliver high-quality software products. The Software Engineer should have experience with software development methodologies and tools, as well as strong communication and teamwork skills.",
+        "job_responsibility": "The Software Engineer will be responsible for designing, developing, and maintaining software applications that meet the business requirements of the organization. This involves working with product managers and designers to understand customer needs, developing software solutions that meet those needs, and maintaining the software after release. The Software Engineer will write code, perform unit testing, and collaborate with other developers on the team to ensure that code is efficient, maintainable, and scalable. The Software Engineer should also be comfortable working with version control systems, such as Git, and using Agile software development methodologies.",
+        "educational_requirements": "Bachelor's degree in Computer Science, Software Engineering, or a related field.",
+        "experiences": "2-3 Years in this field.",
+        "contact_information": {
+            "phone": "+1 341-441-1988",
+            "email": "career@tesla.com"
+        }
     },
     {
         "id": "ftj-1zfubf",
+        "job_id": "j5edortn4fazmo2mpz6",
         "logo": "https://i.ibb.co/6ntnNXS/ftj-meta.png",
         "job_title": "Computer Vision Engineer",
         "company_name": "Meta",
         "work_type": "Onsite",
         "location": "Tel Aviv, Israel",
         "job_type": "FullTime",
-        "salary": "122K - 179K"
+        "salary": "122K - 179K",
+        "job_description": "We are seeking a Computer Vision Engineer to join our team. The Computer Vision Engineer will be responsible for designing, developing, and implementing computer vision and machine learning algorithms to solve complex visual recognition problems. The ideal candidate should have a strong background in computer vision, image processing, machine learning, and deep learning. They should be familiar with various deep learning frameworks such as TensorFlow, Keras, and PyTorch, as well as image processing libraries such as OpenCV. The Computer Vision Engineer will work with cross-functional teams, including product managers and software engineers, to deliver high-quality computer vision solutions.",
+        "job_responsibility": "The Computer Vision Engineer will be responsible for designing, developing, and implementing computer vision and machine learning algorithms to solve complex visual recognition problems. They will work with large datasets and use deep learning techniques to train models that recognize objects, people, and other visual patterns. The Computer Vision Engineer will also be responsible for designing and implementing image processing pipelines that optimize images for recognition tasks. They will work closely with other engineers and stakeholders to ensure that computer vision solutions meet the requirements of the business. Additionally, the Computer Vision Engineer should stay up to date with the latest research and techniques in computer vision and machine learning and incorporate them into their work.",
+        "educational_requirements": "Master's or Ph.D. degree in Computer Science, Electrical Engineering, or a related field.",
+        "experiences": "2-3 Years in this field.",
+        "contact_information": {
+            "phone": "+1 505-644-4622",
+            "email": "career@meta.com"
+        }
     },
     {
         "id": "ftj-ckmxbd",
+        "job_id": "jkulbua9sfsil3lto1z",
         "logo": "https://i.ibb.co/pP51fLL/ftj-amazon.png",
         "job_title": "DFT Engineer",
         "company_name": "Amazon",
         "work_type": "Remote",
         "location": "ISR, Haifa",
         "job_type": "PartTime",
-        "salary": "109K - 152K"
+        "salary": "109K - 152K",
+        "job_description": "We are seeking a DFT (Design-for-Testability) Engineer to join our team. The DFT Engineer will be responsible for ensuring that integrated circuits (ICs) are designed with testability in mind, in order to reduce manufacturing test costs and improve yield. The ideal candidate should have a strong background in digital design, ASIC design, and testability concepts. They should have experience with DFT insertion techniques, scan chain design, and boundary scan (JTAG) testing. The DFT Engineer will work closely with other engineers, including digital design engineers, verification engineers, and test engineers, to ensure that DFT requirements are met throughout the design process. Additionally, the DFT Engineer should stay up to date with the latest DFT techniques and industry trends and incorporate them into their work.",
+        "job_responsibility": "The DFT Engineer will be responsible for ensuring that integrated circuits (ICs) are designed with testability in mind, in order to reduce manufacturing test costs and improve yield. They will work closely with the digital design team to develop and implement DFT strategies that meet the test requirements for the design. The DFT Engineer will be responsible for DFT insertion, scan chain design, and boundary scan (JTAG) testing. They will also work closely with verification engineers to ensure that DFT requirements are met and that designs are properly tested. The DFT Engineer will work with test engineers to develop and execute manufacturing test plans, and to ensure that ICs are tested properly during production. Additionally, the DFT Engineer should stay up to date with the latest DFT techniques and industry trends, and work with the design team to incorporate them into the design process. Strong problem-solving skills, attention to detail, and the ability to work well in a team are essential for success as a DFT Engineer.",
+        "educational_requirements": "Bachelor's or Master's degree in Electrical Engineering, Computer Engineering, or a related field.",
+        "experiences": "3-5 Years in this field.",
+        "contact_information": {
+            "phone": "+1 201-908-5958",
+            "email": "career@amazon.com"
+        }
     },
     {
         "id": "ftj-ik2uso",
+        "job_id": "jfub53bnxc3aqm78v9c",
         "logo": "https://i.ibb.co/1vf909w/ftj-google.png",
         "job_title": "Security And Reverse Engineer",
         "company_name": "Google LLC",
         "work_type": "Onsite",
         "location": "London, Toronto, Ontario",
         "job_type": "PartTime",
-        "salary": "100K - 150K"
+        "salary": "100K - 150K",
+        "job_description": "We are seeking a Security and Reverse Engineer to join our team. The Security and Reverse Engineer will be responsible for analyzing software and hardware systems to identify vulnerabilities and potential security threats. The ideal candidate should have a strong background in computer science, software engineering, and reverse engineering. They should be familiar with a range of security tools and techniques, including static and dynamic analysis, fuzzing, vulnerability scanning, and penetration testing. The Security and Reverse Engineer will work closely with other engineers, including software developers and system administrators, to identify and address security issues. They will also be responsible for developing and implementing security strategies and policies to mitigate risk and protect sensitive information. Additionally, the Security and Reverse Engineer should stay up to date with the latest security threats and trends, and incorporate them into their work. Strong problem-solving skills, attention to detail, and the ability to work well in a team are essential for success as a Security and Reverse Engineer.",
+        "job_responsibility": "The Security and Reverse Engineer will be responsible for analyzing software and hardware systems to identify potential security vulnerabilities and threats. They will perform static and dynamic analysis, fuzzing, vulnerability scanning, and penetration testing to identify potential weaknesses in the system. The Security and Reverse Engineer will work closely with other engineers, including software developers and system administrators, to develop and implement security strategies and policies to mitigate risk and protect sensitive information. They will also be responsible for conducting security audits and assessments of existing systems to ensure compliance with industry and regulatory standards. Additionally, the Security and Reverse Engineer will provide guidance and training to other engineers on best practices for secure software development and deployment. Strong problem-solving skills, attention to detail, and the ability to work well in a team are essential for success as a Security and Reverse Engineer.",
+        "educational_requirements": "Bachelor's or Master's degree in Computer Science, Computer Engineering, Electrical Engineering, or a related field.",
+        "experiences": "3-5 Years in this field.",
+        "contact_information": {
+            "phone": "+1 505-826-8448",
+            "email": "career@google.com"
+        }
     }
 ]
