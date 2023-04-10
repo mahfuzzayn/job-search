@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <header className="header bg-[#faf8ff] pt-[60px] px-6">
-            <div className="container max-w-[1920px] flex flex-col md:flex-row md:justify-around items-start md:items-center gap-y-6 mx-auto">
+            <div className="container max-w-[1920px] flex flex-col md:flex-row md:justify-around items-start md:items-center gap-y-8 mx-auto">
                 <h2 className="text-[32px] text-[#1A1919] font-extrabold">
                     <Link to="/">JobSearch</Link>
                 </h2>

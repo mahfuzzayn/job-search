@@ -1,0 +1,62 @@
+[
+    {
+        "id": "ftj-zwo2vp",
+        "logo": "https://i.ibb.co/1vf909w/ftj-google.png",
+        "job_title": "Technical Database Engineer",
+        "company_name": "Google LLC",
+        "work_type": "Remote",
+        "location": "Dhaka, Bangladesh",
+        "job_type": "FullTime",
+        "salary": "100K - 150K"
+    },
+    {
+        "id": "ftj-z6uulb",
+        "logo": "https://i.ibb.co/CMc3VY6/ftj-netflix.png",
+        "job_title": "Senior Product Designer",
+        "company_name": "Netflix",
+        "work_type": "Onsite",
+        "location": "Dhaka, Bangladesh",
+        "job_type": "FullTime",
+        "salary": "100K - 150K"
+    },
+    {
+        "id": "ftj-uaisfr",
+        "logo": "https://i.ibb.co/VJY1LRs/ftj-tesla.png",
+        "job_title": "Software Engineer",
+        "company_name": "Tesla",
+        "work_type": "Onsite",
+        "location": "Dhaka, Bangladesh",
+        "job_type": "FullTime",
+        "salary": "100K - 150K"
+    },
+    {
+        "id": "ftj-1zfubf",
+        "logo": "https://i.ibb.co/6ntnNXS/ftj-meta.png",
+        "job_title": "Computer Vision Engineer",
+        "company_name": "Meta",
+        "work_type": "Onsite",
+        "location": "Tel Aviv, Israel",
+        "job_type": "FullTime",
+        "salary": "122K - 179K"
+    },
+    {
+        "id": "ftj-ckmxbd",
+        "logo": "https://i.ibb.co/pP51fLL/ftj-amazon.png",
+        "job_title": "DFT Engineer",
+        "company_name": "Amazon",
+        "work_type": "Remote",
+        "location": "ISR, Haifa",
+        "job_type": "PartTime",
+        "salary": "109K - 152K"
+    },
+    {
+        "id": "ftj-ik2uso",
+        "logo": "https://i.ibb.co/1vf909w/ftj-google.png",
+        "job_title": "Security And Reverse Engineer",
+        "company_name": "Google LLC",
+        "work_type": "Onsite",
+        "location": "London, Toronto, Ontario",
+        "job_type": "PartTime",
+        "salary": "100K - 150K"
+    }
+]

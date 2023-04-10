@@ -4,10 +4,10 @@ import "./Banner.css";
 
 const Banner = () => {
     return (
-        <div className="banner-section bg-[#faf8ff] pt-[60px] px-6">
+        <div className="banner-section bg-[#faf8ff] pt-[60px] px-6 md:px-12">
             <div className="container max-w-[1920px] flex flex-col md:flex-row md:justify-center item-start md:items-end gap-[35px] mx-auto">
                 <div className="content max-w-[570px] md:mb-[136px]">
-                    <h2 className="text-[60px] lg:text-[80px] text-[#1A1919] font-bold lg:leading-[100px]">
+                    <h2 className="text-[60px] lg:text-[80px] text-[#1A1919] font-bold leading-[80px] lg:leading-[100px]">
                         One Step Closer To Your{" "}
                         <span className="linear-text">Dream Job</span>
                     </h2>
