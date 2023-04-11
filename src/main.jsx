@@ -8,6 +8,7 @@ import Statistics from "./components/Statistics/Statistics";
 import Blog from "./components/Blog/Blog";
 import AppliedJobs from "./components/AppliedJobs/AppliedJobs";
 import JobDetails from "./components/JobDetails/JobDetails";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const loadHomeData = async () => {
     const [jobCategories, featuredJobs] = await Promise.all([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
                 path: "job/:jobId",
                 element: <JobDetails></JobDetails>,
                 loader: ({ params }) => loadJobDetails(params),
+            },
+            {
+                path: "*",
+                element: <ErrorPage></ErrorPage>,
             },
         ],
     },

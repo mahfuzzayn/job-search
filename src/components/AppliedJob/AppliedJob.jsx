@@ -56,9 +56,6 @@ const AppliedJob = ({ jobId, featuredJobs }) => {
                     </p>
                 </div>
             </div>
-            {/* <button className="bg-gradient-to-r w-full max-w-[157px] from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[18px] py-[11px] lg:mr-[17px] mt-6 rounded-lg">
-                <Link to={`/job/${job_id}`}>View Details</Link>
-            </button> */}
             <button className="text-[#FFFFFF] text-[20px] font-bold lg:mr-[17px] mt-6 md:mt-0">
                 <Link
                     to={`/job/${job_id}`}
