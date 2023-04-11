@@ -1,15 +1,19 @@
 import React, { useEffect } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation } from "react-router-dom";
 import dollarColored from "../../assets/Logo/dollar-linear-colored.svg";
 import calendarColored from "../../assets/Logo/calendar-linear-colored.svg";
 import phoneColored from "../../assets/Logo/phone-linear-colored.svg";
 import emailColored from "../../assets/Logo/email-linear-colored.svg";
 import locationColored from "../../assets/Logo/location-linear-colored.svg";
 import "./JobDetails.css";
+import { addToDb } from "../../utilities/fakedb";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const JobDetails = () => {
     const job = useLoaderData();
     const {
+        id,
         job_title,
         job_description,
         job_responsibility,
@@ -20,13 +24,41 @@ const JobDetails = () => {
         contact_information,
     } = job;
 
+    const getBrowserLocation = useLocation();
     useEffect(() => {
         document.title = "Job Details - JobSearch";
-    }, [job]);
+    }, [getBrowserLocation]);
     console.log(job);
 
+    const handleAddToAppliedJobs = (id) => {
+        const exists = addToDb(id);
+        if (!exists) {
+            toast.warn(`You have already applied to ${job_title} job`, {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        } else {
+            toast.success(`You have applied for ${job_title} job`, {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+    };
+
     return (
-        <div className="main-conten">
+        <div className="main-content">
             <div className="container max-w-[1920px] mx-auto">
                 <div className="job-details-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
                     <h2 className="text-[32px] text-[#1A1919] font-bold">
@@ -82,10 +114,10 @@ const JobDetails = () => {
                                 </p>
                                 <p className="flex flex-col sm:flex-row items-center gap-x-2">
                                     <img src={calendarColored} alt="" />
-                                    <span className="text-[20px] text-[#474747] text-center font-bold">
+                                    <span className="text-[20px] text-[#474747] text-center font-bold whitespace-nowrap">
                                         Job Title<span className="px-1">:</span>
                                     </span>
-                                    <span className="text-[20px] text-[#757575] text-center font-medium">
+                                    <span className="text-[20px] text-[#757575] text-left font-medium ">
                                         {job_title}
                                     </span>
                                 </p>
@@ -124,12 +156,16 @@ const JobDetails = () => {
                                 </p>
                             </div>
                         </div>
-                        <button className="w-full bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg">
+                        <button
+                            onClick={() => handleAddToAppliedJobs(id)}
+                            className="w-full bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg"
+                        >
                             Apply Now
                         </button>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

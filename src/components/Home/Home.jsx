@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import JobCategoryList from "../JobCategoryList/JobCategoryList";
 import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
+import { ToastContainer } from 'react-toastify';
 
 const Home = () => {
     return (

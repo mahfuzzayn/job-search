@@ -14,7 +14,6 @@ const Header = () => {
     const location = useLocation();
     useEffect(() => {
         document.title = titles[location.pathname] ?? "JobSearch";
-        console.log(location)
     }, [location]);
 
     return (
