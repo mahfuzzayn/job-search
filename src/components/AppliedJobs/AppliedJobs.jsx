@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { getAppliedJobs } from "../../utilities/fakedb";
 import "./AppliedJobs.css";
 import AppliedJob from "../AppliedJob/AppliedJob";
@@ -8,6 +8,7 @@ import { useLoaderData } from "react-router-dom";
 const AppliedJobs = () => {
     const featuredJobs = useLoaderData();
     const [appliedJobs, setAppliedJobs] = useState([]);
+    const [fixedAppliedJobs, setFixedAppliedJobs] = useState([]);
     const [isFilterDropdownActive, setIsFilterDropdownActive] = useState(false);
     const [filterBy, setFilterBy] = useState(["default"]);
     useEffect(() => {
@@ -17,7 +18,8 @@ const AppliedJobs = () => {
             appliedJobsArray.push(id);
         }
         setAppliedJobs(appliedJobsArray);
-    }, []);
+        setFixedAppliedJobs(appliedJobsArray);
+    }, [filterBy]);
 
     const handleFilterBy = (filterType) => {
         if (filterType === "remote") {
@@ -32,8 +34,37 @@ const AppliedJobs = () => {
         }
     };
     useEffect(() => {
-        console.log(filterBy);
+        const allAppliedJobs = [];
+        for (const jobId of fixedAppliedJobs) {
+            allAppliedJobs.push(featuredJobs.find((job) => job.id === jobId));
+        }
+        if (filterBy[0] === "remote") {
+            const remoteAppliedJobs = allAppliedJobs.filter(
+                (job) => job.work_type === "Remote"
+            );
+            const remoteAppliedJobsId = remoteAppliedJobs.map((job) => job.id);
+            setAppliedJobs(remoteAppliedJobsId);
+        } else if (filterBy[0] === "on-site") {
+            const onsiteAppliedJobs = allAppliedJobs.filter(
+                (job) => job.work_type === "Onsite"
+            );
+            const onsiteAppliedJobsId = onsiteAppliedJobs.map((job) => job.id);
+            setAppliedJobs(onsiteAppliedJobsId);
+        }
     }, filterBy);
+
+    let filterByRef = useRef();
+
+    useEffect(() => {
+        const closeDropdown = (e) => {
+            if (!filterByRef.current.contains(e.target)) {
+                setIsFilterDropdownActive(false);
+            }
+        };
+
+        document.addEventListener("mousedown", closeDropdown);
+        return () => document.removeEventListener("mousedown", closeDropdown);
+    }, []);
 
     return (
         <div className="main-content">
@@ -49,6 +80,7 @@ const AppliedJobs = () => {
                             className={`dropdown bg-[#F4F4F4] h-[69px] overflow-hidden max-w-[160px] text-[20px] text-[#474747] font-semibold text-right p-2 rounded-lg ${
                                 isFilterDropdownActive && "dropdown-active"
                             }`}
+                            ref={filterByRef}
                         >
                             <button
                                 onClick={() => {
@@ -56,7 +88,7 @@ const AppliedJobs = () => {
                                         !isFilterDropdownActive
                                     );
                                 }}
-                                className="flex items-center gap-x-2 px-[16px] py-[15px] mb-1"
+                                className="flex items-center gap-x-2 px-[16px] py-[15px] mb-1 outline-none"
                             >
                                 Filter By
                                 <img
