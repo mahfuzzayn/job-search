@@ -14,6 +14,7 @@ const JobDetails = () => {
     const job = useLoaderData();
     const {
         id,
+        company_name,
         job_title,
         job_description,
         job_responsibility,
@@ -28,38 +29,43 @@ const JobDetails = () => {
     useEffect(() => {
         document.title = "Job Details - JobSearch";
     }, [getBrowserLocation]);
-    console.log(job);
 
     const handleAddToAppliedJobs = (id) => {
         const exists = addToDb(id);
         if (!exists) {
-            toast.warn(`You have already applied to ${job_title} job`, {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            toast.warn(
+                `You have already applied to ${job_title} job at ${company_name}.`,
+                {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                }
+            );
         } else {
-            toast.success(`You have applied for ${job_title} job`, {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            toast.success(
+                `You have applied for ${job_title} job at ${company_name}.`,
+                {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                }
+            );
         }
     };
 
     return (
         <div className="main-content">
-            <div className="container max-w-[1920px] mx-auto">
+            <div className="container max-w-[1920px] mx-auto mb-[130px]">
                 <div className="job-details-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
                     <h2 className="text-[32px] text-[#1A1919] font-bold">
                         Job Details
@@ -117,7 +123,7 @@ const JobDetails = () => {
                                     <span className="text-[20px] text-[#474747] text-center font-bold whitespace-nowrap">
                                         Job Title<span className="px-1">:</span>
                                     </span>
-                                    <span className="text-[20px] text-[#757575] text-left font-medium ">
+                                    <span className="text-[20px] text-[#757575] text-center sm:text-left font-medium ">
                                         {job_title}
                                     </span>
                                 </p>

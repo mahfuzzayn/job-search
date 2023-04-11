@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import JobCategory from "../JobCategory/JobCategory";
 
 const JobCategoryList = () => {
-    const jobCategories = useLoaderData();
+    const { jobCategories } = useLoaderData();
 
     return (
         <div className="job-category-list-section mt-[130px] mx-6">

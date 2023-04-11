@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import FeaturedJob from "../FeaturedJob/FeaturedJob";
+import { useLoaderData } from "react-router-dom";
 
 const FeaturedJobs = () => {
-    const [featuredJobs, setFeaturedJobs] = useState([]);
+    const { featuredJobs: allFeaturedJobs } = useLoaderData();
+    const [featuredJobs, setFeaturedJobs] = useState(allFeaturedJobs);
+
     useEffect(() => {
-        fetch("featured-jobs.json")
-            .then((res) => res.json())
-            .then((data) => setFeaturedJobs(data));
+        setFeaturedJobs(allFeaturedJobs.slice(0, 4))
     }, []);
+
+    const handleSeeAllJobs = () => {
+        setFeaturedJobs(allFeaturedJobs.slice(0, 6));
+    };
 
     return (
         <div className="featured-jobs-section mt-[130px] mx-6">
@@ -29,7 +34,10 @@ const FeaturedJobs = () => {
                         ></FeaturedJob>
                     ))}
                 </div>
-                <button className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg">
+                <button
+                    onClick={handleSeeAllJobs}
+                    className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg"
+                >
                     See All Jobs
                 </button>
             </div>

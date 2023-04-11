@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const FeaturedJob = ({ featuredJob }) => {
     const {
-        id,
         job_id,
         logo,
         job_title,
@@ -32,7 +31,7 @@ const FeaturedJob = ({ featuredJob }) => {
                     {job_type}
                 </span>
             </p>
-            <p className="flex gap-x-6 mt-4">
+            <p className="flex flex-col sm:flex-row gap-x-6 gap-y-2 mt-4">
                 <span className="flex gap-x-2">
                     <img src={locationIcon} alt="" />
                     <span className="text-[20px] text-[#757575] font-semibold">
@@ -46,8 +45,13 @@ const FeaturedJob = ({ featuredJob }) => {
                     </span>
                 </span>
             </p>
-            <button className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[18px] py-[11px] mt-6 rounded-lg">
-                <Link to={`/job/${job_id}`}>View Details</Link>
+            <button className="text-[#FFFFFF] text-[20px] font-bold mt-[35px] mb-3">
+                <Link
+                    to={`/job/${job_id}`}
+                    className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-[18px] pt-[12px] pb-[12.5px] rounded-lg"
+                >
+                    View Details
+                </Link>
             </button>
         </div>
     );

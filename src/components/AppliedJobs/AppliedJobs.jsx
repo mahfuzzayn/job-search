@@ -68,7 +68,7 @@ const AppliedJobs = () => {
 
     return (
         <div className="main-content">
-            <div className="container max-w-[1920px] mx-auto">
+            <div className="container max-w-[1920px] mx-auto mb-[130px]">
                 <div className="applied-jobs-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
                     <h2 className="text-[32px] text-[#1A1919] font-bold">
                         Applied Jobs
@@ -120,13 +120,30 @@ const AppliedJobs = () => {
                         </div>
                     </div>
                     <div className="applied-jobs-container flex flex-col gap-y-6 mt-8">
-                        {appliedJobs.map((job) => (
-                            <AppliedJob
-                                key={job}
-                                jobId={job}
-                                featuredJobs={featuredJobs}
-                            ></AppliedJob>
-                        ))}
+                        {appliedJobs.length > 0 ? (
+                            appliedJobs.map((job) => (
+                                <AppliedJob
+                                    key={job}
+                                    jobId={job}
+                                    featuredJobs={featuredJobs}
+                                ></AppliedJob>
+                            ))
+                        ) : (
+                            <div className="no-applied-job">
+                                <h2 className="text-[32px] text-[#1A1919] font-bold text-center">
+                                    <span>You haven't applied for any</span>
+                                    <span>
+                                        {" "}
+                                        {filterBy[0] === "remote"
+                                            ? "Remote"
+                                            : filterBy[0] === "on-site"
+                                            ? "Onsite"
+                                            : ""}{" "}
+                                    </span>
+                                    <span>jobs</span>
+                                </h2>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

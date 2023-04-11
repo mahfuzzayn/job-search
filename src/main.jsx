@@ -10,14 +10,11 @@ import AppliedJobs from "./components/AppliedJobs/AppliedJobs";
 import JobDetails from "./components/JobDetails/JobDetails";
 
 const loadHomeData = async () => {
-    const urls = ["../job-categories.json", "../featured-jobs.json"];
-    const data = [];
-    for (const url in urls) {
-        const res = await fetch(url);
-        const d = await res.json();
-        console.log(d);
-    }
-    console.log(data);
+    const [jobCategories, featuredJobs] = await Promise.all([
+        fetch("../job-categories.json").then((res) => res.json()),
+        fetch("../featured-jobs.json").then((res) => res.json()),
+    ]);
+    return { jobCategories, featuredJobs };
 };
 
 const loadJobDetails = async (params) => {
@@ -34,7 +31,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch("../job-categories.json"),
+                loader: loadHomeData,
             },
             {
                 path: "/statistics",
