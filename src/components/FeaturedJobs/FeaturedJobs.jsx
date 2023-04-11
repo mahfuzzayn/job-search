@@ -5,18 +5,20 @@ import { useLoaderData } from "react-router-dom";
 const FeaturedJobs = () => {
     const { featuredJobs: allFeaturedJobs } = useLoaderData();
     const [featuredJobs, setFeaturedJobs] = useState(allFeaturedJobs);
+    const [isAllJobsVisible, setIsAllJobsVisible] = useState(false);
 
     useEffect(() => {
-        setFeaturedJobs(allFeaturedJobs.slice(0, 4))
+        setFeaturedJobs(allFeaturedJobs.slice(0, 4));
     }, []);
 
     const handleSeeAllJobs = () => {
         setFeaturedJobs(allFeaturedJobs.slice(0, 6));
+        setIsAllJobsVisible(true);
     };
 
     return (
         <div className="featured-jobs-section mt-[130px] mx-6">
-            <div className="container flex flex-col items-center max-w-[1920px] mx-auto">
+            <div className="container flex flex-col items-center max-w-[1920px] mx-auto mb-[130px]">
                 <div className="information-container text-center">
                     <h2 className="text-[48px] text-[#1A1919] font-bold">
                         Featured Jobs
@@ -36,7 +38,7 @@ const FeaturedJobs = () => {
                 </div>
                 <button
                     onClick={handleSeeAllJobs}
-                    className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg"
+                    className={`bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg ${isAllJobsVisible && "hidden"}`}
                 >
                     See All Jobs
                 </button>
