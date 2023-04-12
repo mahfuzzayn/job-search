@@ -32,11 +32,11 @@ const AppliedJob = ({ jobId, featuredJobs }) => {
                     <p className="text-[20px] text-[#757575] font-semibold mt-2">
                         {company_name}
                     </p>
-                    <p className="flex gap-x-4 mt-4">
-                        <span className="linear-text linear-text px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
+                    <p className="flex flex-col sm:flex-row gap-4 mt-4">
+                        <span className="linear-text w-fit px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
                             {work_type}
                         </span>
-                        <span className="linear-text px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
+                        <span className="linear-text w-fit px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
                             {job_type}
                         </span>
                     </p>

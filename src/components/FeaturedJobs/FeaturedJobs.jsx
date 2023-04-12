@@ -38,7 +38,9 @@ const FeaturedJobs = () => {
                 </div>
                 <button
                     onClick={handleSeeAllJobs}
-                    className={`bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg ${isAllJobsVisible && "hidden"}`}
+                    className={`bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] mt-10 rounded-lg ${
+                        isAllJobsVisible && "hidden"
+                    }`}
                 >
                     See All Jobs
                 </button>

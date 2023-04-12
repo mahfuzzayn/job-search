@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
-import { useLoaderData, useLocation } from "react-router-dom";
+import {
+    useLoaderData,
+    useLocation,
+    useNavigate,
+    useNavigation,
+    useNavigationType,
+} from "react-router-dom";
 import dollarColored from "../../assets/Logo/dollar-linear-colored.svg";
 import calendarColored from "../../assets/Logo/calendar-linear-colored.svg";
 import phoneColored from "../../assets/Logo/phone-linear-colored.svg";
@@ -26,9 +32,19 @@ const JobDetails = () => {
     } = job;
 
     const getBrowserLocation = useLocation();
+    const navigationType = useNavigationType();
+
     useEffect(() => {
         document.title = "Job Details - JobSearch";
+        navigationType === "PUSH" && handleScrollToJobDetails();
     }, [getBrowserLocation]);
+
+    const handleScrollToJobDetails = () => {
+        let jobDetailsContainer = document.querySelector(
+            ".job-details-container"
+        );
+        jobDetailsContainer.scrollIntoView();
+    };
 
     const handleAddToAppliedJobs = (id) => {
         const exists = addToDb(id);
@@ -64,13 +80,13 @@ const JobDetails = () => {
     };
 
     return (
-        <div className="main-content">
+        <div className="main-content job-details">
+            <div className="job-details-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
+                <h2 className="text-[32px] text-[#1A1919] font-bold">
+                    Job Details
+                </h2>
+            </div>
             <div className="container max-w-[1920px] mx-auto mb-[130px]">
-                <div className="job-details-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
-                    <h2 className="text-[32px] text-[#1A1919] font-bold">
-                        Job Details
-                    </h2>
-                </div>
                 <div className="job-details-container flex flex-col lg:flex-row mt-[130px] gap-6 mx-12">
                     <div className="left-content flex flex-col gap-y-6">
                         <p className="text-[16px] text-[#1A1919] font-bold leading-8">

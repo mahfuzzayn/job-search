@@ -50,18 +50,18 @@ const assignmentMarks = [
 
 const Statistics = () => {
     return (
-        <div className="main-content">
+        <div className="main-content statistics">
+            <div className="statistics-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
+                <h2 className="text-[32px] text-[#1A1919] font-bold">
+                    Statistics
+                </h2>
+            </div>
             <div className="container max-w-[1920px] mx-auto mb-[130px]">
-                <div className="statistics-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
-                    <h2 className="text-[32px] text-[#1A1919] font-bold">
-                        Statistics
-                    </h2>
-                </div>
-                <div className="assignment-mark-chart-container mt-[130px]">
+                <div className="assignment-mark-chart-container mt-[130px] mx-6">
                     <h2 className="text-[40px] text-[#1A1919] font-bold text-center linear-text mb-10 mx-6">
                         Your past {assignmentMarks.length} Assignment Marks
                     </h2>
-                    <div className="sameDataComposedChart mx-6">
+                    <div className="sameDataComposedChart max-w-[1320px] mx-auto">
                         <ResponsiveContainer width="100%" height={400}>
                             <ComposedChart
                                 width={500}

@@ -67,13 +67,13 @@ const AppliedJobs = () => {
     }, []);
 
     return (
-        <div className="main-content">
+        <div className="main-content applied-jobs">
+            <div className="applied-jobs-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
+                <h2 className="text-[32px] text-[#1A1919] font-bold">
+                    Applied Jobs
+                </h2>
+            </div>
             <div className="container max-w-[1920px] mx-auto mb-[130px]">
-                <div className="applied-jobs-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
-                    <h2 className="text-[32px] text-[#1A1919] font-bold">
-                        Applied Jobs
-                    </h2>
-                </div>
                 <div className="applied-jobs-section mt-[227px] mx-12">
                     <div className="filter-section flex justify-end">
                         <div
@@ -105,7 +105,7 @@ const AppliedJobs = () => {
                                         "filter-by-active"
                                     }`}
                                 >
-                                    <span>Remote</span>
+                                    <span className="select-none">Remote</span>
                                 </p>
                                 <p
                                     onClick={() => handleFilterBy("on-site")}
@@ -114,7 +114,7 @@ const AppliedJobs = () => {
                                         "filter-by-active"
                                     }`}
                                 >
-                                    <span>On-site</span>
+                                    <span className="select-none">On-site</span>
                                 </p>
                             </div>
                         </div>

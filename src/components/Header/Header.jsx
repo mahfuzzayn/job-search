@@ -12,6 +12,13 @@ const titles = {
 
 const Header = () => {
     const location = useLocation();
+    const handleStartApplying = () => {
+        let featuredJobsSection = document.querySelector(
+            ".featured-jobs-section"
+        );
+        featuredJobsSection.scrollIntoView({ behavior: "smooth" });
+    };
+
     useEffect(() => {
         document.title = titles[location.pathname] ?? "JobSearch";
     }, [location]);
@@ -40,7 +47,12 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <button className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] rounded-lg">
+                <button
+                    onClick={() =>
+                        location.pathname === "/" && handleStartApplying()
+                    }
+                    className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-[#FFFFFF] text-[20px] font-bold px-[28px] py-[19px] rounded-lg"
+                >
                     Star Applying
                 </button>
             </div>

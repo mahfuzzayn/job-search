@@ -4,15 +4,14 @@ import { Link, useLocation } from "react-router-dom";
 
 const ErrorPage = () => {
     const location = useLocation();
-    console.log(location);
     return (
         <div className="error-page-section">
+            <div className="error-page-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
+                <h1 className="text-8xl text-[#1A1919] linear-text font-bold">
+                    404
+                </h1>
+            </div>
             <div className="container max-w-[1920px] mx-auto mb-[130px]">
-                <div className="error-page-banner h-[272px] bg-[#faf8ff] flex justify-center items-center">
-                    <h1 className="text-9xl text-[#1A1919] linear-text font-bold">
-                        404
-                    </h1>
-                </div>
                 <div className="error-page-information text-center mt-[130px] mx-6">
                     <h2 className="text-5xl text-[#1A1919] font-bold">Oops</h2>
                     <p className="text-xl text-[#757575] font-medium mt-4">

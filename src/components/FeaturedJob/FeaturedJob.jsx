@@ -15,7 +15,7 @@ const FeaturedJob = ({ featuredJob }) => {
         salary,
     } = featuredJob;
     return (
-        <div className="featured-job w-full max-w-[648px] border-2 border-[#E8E8E8] rounded-lg pt-10 pl-10 pb-[51px]">
+        <div className="featured-job w-full max-w-[648px] border-2 border-[#E8E8E8] rounded-lg p-8 sm:p-10">
             <img src={logo} alt="" />
             <h2 className="text-[24px] text-[#474747] font-bold mt-8">
                 {job_title}
@@ -23,11 +23,11 @@ const FeaturedJob = ({ featuredJob }) => {
             <p className="text-[20px] text-[#757575] font-semibold mt-2">
                 {company_name}
             </p>
-            <p className="flex gap-x-4 mt-4">
-                <span className="linear-text linear-text px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
+            <p className="flex flex-col sm:flex-row gap-4 mt-4">
+                <span className="linear-text w-fit px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
                     {work_type}
                 </span>
-                <span className="linear-text px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
+                <span className="linear-text w-fit px-[19px] py-[9px] border-2 border-[#7E90FE] rounded-[4px]">
                     {job_type}
                 </span>
             </p>
@@ -48,7 +48,7 @@ const FeaturedJob = ({ featuredJob }) => {
             <button className="text-[#FFFFFF] text-[20px] font-bold mt-[35px] mb-3">
                 <Link
                     to={`/job/${job_id}`}
-                    className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-[18px] pt-[12px] pb-[12.5px] rounded-lg"
+                    className="bg-gradient-to-r from-[#7E90FE] to-[#9873FF] px-[18px] pt-[12px] pb-[12.5px] rounded-lg whitespace-nowrap"
                 >
                     View Details
                 </Link>
